@@ -9,8 +9,8 @@ class Main():
     def __init__(self):
         self.totalPlaytime = 0
         self.serverPath = input("Path to server file: ")
-        self.clearPlayerFiles()
         self.findPlayers()
+        self.clearPlayerFiles()
         for file in os.listdir(str(self.serverPath + "\logs")):
             valid = True
             filename = os.fsdecode(file)
@@ -48,13 +48,13 @@ class Main():
 
     def openContents(self, file):
         try:
-            print(f"Opened File {file}")
+            #print(f"Opened File {file}")
             file = gzip.open(file, "r")
             lines = file.readlines()
             return lines
         except:
             try:
-                print(f"Opened File {file}")
+                #print(f"Opened File {file}")
                 file = open(file, "r")
                 lines = file.readlines()
                 return lines
@@ -133,12 +133,12 @@ class Main():
                         totalTime += timeDifference
                         newPlayer.totalPlaytime = totalTime
 
-                    if "made a server operator" in line: # Server Operator Yes
-                        print("Server operator")
+                    if "server operator" in line: # Server Operator Yes
+                        print(line)
                         newPlayer.serverOperator = True
 
                     if "no longer a server operator" in line: # Server Operator No
-                        print("No server operator")
+                        print(line)
                         newPlayer.serverOperator = False
 
                     if "made the advancement" in line: ## Advancement Tracker
