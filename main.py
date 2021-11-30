@@ -3,8 +3,8 @@ from ServerInfo.getServerInfo import *
 import gui
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtWidgets import QFileDialog, QMessageBox
-__version__ = "0.2.0"
-__beta__ = True
+__version__ = "0.2.1"
+__beta__ = False
 
 
 
