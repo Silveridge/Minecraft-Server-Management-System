@@ -38,9 +38,12 @@ if __name__ == "__main__":
 
     elif len(open("cache/mostRecentServer.txt").readlines()) <= 0:
         location = open("cache/serverLocations.txt").readlines()[0].strip("\n")
+        print(location)
         with open("cache/mostRecentServer.txt","a") as file:
                     file.write(str(location) + "\n")
                     file.close()
+    else:
+        location = open("cache/mostRecentServer.txt").readlines()[0].strip("\n")
 
         
     
