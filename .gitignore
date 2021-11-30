@@ -1,4 +1,3 @@
 **/playerData
 **/players.txt
-/mostRecentServer.txt
-/serverLocations.txt
+cache/
